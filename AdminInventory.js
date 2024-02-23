@@ -1,3 +1,22 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current URL path
+    const currentPath = window.location.pathname;
+    // Extract the filename or PHP script name from the path
+    const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+
+    document.querySelectorAll('.sidebar-nav .sidebar-link').forEach(function(link) {
+        // Extract the link target from the href attribute
+        const linkTarget = new URL(link.href).pathname.substring(new URL(link.href).pathname.lastIndexOf('/') + 1);
+
+        // Check if the current page matches the link target or if the current page is "AdminFeedback.php" or "AdminInventory.php"
+        if (currentPage === linkTarget || (currentPage === 'AdminFeedback.php' && linkTarget === 'AdminFeedback.php') || (currentPage === 'AdminInventory.php' && linkTarget === 'AdminInventory.php')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
+
 document.getElementById('addProductForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
@@ -37,7 +56,7 @@ document.getElementById('addProductForm').addEventListener('submit', function(e)
                             <p class="card-text">₱${price}</p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <p class="card-text"><small class="text-category">In stock x${stock}</small></p>
-                                <a href="#" class="btn btn-warning">EDIT</a>
+                                <a href="#" class="btn btn-warning btn-edit">EDIT</a>
                             </div>
                         </div>
                     </div>
@@ -48,32 +67,16 @@ document.getElementById('addProductForm').addEventListener('submit', function(e)
         // Append new product card to the container
         document.querySelector('.container .row').insertAdjacentHTML('beforeend', productCard);
 
-        // Clear form fields and close the modal
+        // Clear form fields
         document.getElementById('addProductForm').reset();
-        $('#addProductModal').modal('hide'); // Using jQuery for Bootstrap's modal
+
+        // Close the modal using Bootstrap 5's native JS API
+        var modalElement = document.getElementById('addProductModal');
+        var modalInstance = bootstrap.Modal.getInstance(modalElement);
+        modalInstance.hide();
     };
 
     // Read the file as Data URL
     reader.readAsDataURL(imageInput.files[0]);
 });
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the current URL path
-    const currentPath = window.location.pathname;
-    // Extract the filename or PHP script name from the path
-    const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-
-    document.querySelectorAll('.sidebar-nav .sidebar-link').forEach(function(link) {
-        // Extract the link target from the href attribute
-        const linkTarget = new URL(link.href).pathname.substring(new URL(link.href).pathname.lastIndexOf('/') + 1);
-
-        if (currentPage === linkTarget) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-});
-
-
 

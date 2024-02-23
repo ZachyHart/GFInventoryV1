@@ -8,6 +8,13 @@
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,7 +32,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="AdminFeedback.php" class="sidebar-link" data-page="feedback" title="Feedback">
+                    <a href="AdminFeedback.php" class="sidebar-link" data-page="feedback" title="Feedback"> <!-- temporary since no admi nfeedback yet -->
                         <i class="lni lni-comments"></i>
                         <span>Feedback</span>
                     </a>
@@ -39,17 +46,35 @@
         </aside>
 
         <div class="main p-3">
-            <div class="text-center mb-4">
-                <h1>Inventory</h1>
-                <!-- Trigger/Add Product Button -->
-                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#addProductModal">ADD PRODUCT</button>
-            </div>
+        <div class="text-center mb-4">
+    <h1 class="inventory-title">Inventory</h1>
+</div>
+
+<!-- Sort by Category dropdown -->
+<div class="dropdown mx-auto">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="sortCategoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        Sort by Category
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="sortCategoryDropdown">
+       
+        <li><a class="dropdown-item" href="#">Category 1</a></li>
+        <li><a class="dropdown-item" href="#">Category 2</a></li>
+        <li><a class="dropdown-item" href="#">Category 3</a></li>
+        
+    </ul>
+</div>
+
+
+<button class="btn btn-primary btn-custom-position" type="button" data-bs-toggle="modal" data-bs-target="#addProductModal">ADD PRODUCT</button>
+
+
 
             <div class="container">
                 <div class="row">
                     <!-- Products will be added here -->
                 </div>
             </div>
+            
         </div>
     </div>
 
@@ -57,10 +82,11 @@
     <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="addProductModalLabel">Add New Product</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+            <div class="modal-header text-center">
+            <h5 class="modal-title w-100" id="addProductModalLabel">Add New Product</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
                 <div class="modal-body">
                     <form id="addProductForm">
                         <div class="mb-3">
@@ -83,7 +109,9 @@
                             <label for="productStock" class="form-label">Stock Level</label>
                             <input type="number" class="form-control" id="productStock" required>
                         </div>
-                        <button type="submit" class="btn btn-primary">Save Product</button>
+                        <div class="text-center">
+                        <button type="submit" class="btn btn-save-product">Save Product</button>
+                        </div>
                     </form>
                 </div>
             </div>

@@ -28,7 +28,7 @@
                 </li>
                 <!-- Second sidebar item for Feedback -->
                 <li class="sidebar-item">
-                    <a href="CustomerLogin.php" class="sidebar-link" title="Feedback">
+                    <a href="CustomerFeedbacK.php" class="sidebar-link" title="Feedback">
                         <i class="lni lni-comments"></i>
                         <span>Feedback</span>
                     </a>
@@ -36,7 +36,7 @@
                 <!-- Add more sidebar items here -->
             </ul>
             <div class="sidebar-footer">
-                <a href="login.php" class="sidebar-link" title="Logout">
+                <a href="CustomerLogin.php" class="sidebar-link" title="Logout">
                     <i class="lni lni-exit"></i>
                     
                 </a>

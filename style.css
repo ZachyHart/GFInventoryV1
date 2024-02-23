@@ -82,7 +82,7 @@ body {
     align-items: center;
 }
 
-a.sidebar-link {
+.sidebar-link {
     padding: .625rem 1.625rem;
     color: #FFF;
     display: flex;
@@ -94,22 +94,32 @@ a.sidebar-link {
     white-space: nowrap;
     border-left: 3px solid transparent;
     width: 100%;
+    transition: padding-left 0.3s; 
+}
+
+.sidebar-link.active {
+    padding-left: 20px; 
 }
 
 .sidebar-link i {
     font-size: 1.1rem;
-    
 }
 
-a.sidebar-link:hover {
+.sidebar-link:hover {
     background-color: rgba(255, 255, 255, .075);
     border-left: 3px solid white;
 }
+
 
 .sidebar-item {
     position: relative;
     width: 100%;
 }
+
+/*.sidebar-item:first-child .sidebar-link {
+    margin-top: 40px; 
+)*/
+
 
 #sidebar.expand a.sidebar-link {
     justify-content: center;
@@ -139,11 +149,11 @@ a.sidebar-link:hover {
 
 
 .product-img-custom {
-    width: 100%; /* Makes the image responsive */
-    max-width: 140px; /* Adjust this value to fit your design needs */
-    height: auto; /* Keeps the aspect ratio of the image */
-    object-fit: cover; /* Ensures the image covers the area, can be adjusted */
-    margin: auto; /* Centers the image in its container */
+    width: 100%; 
+    max-width: 140px; 
+    height: auto; 
+    object-fit: cover; 
+    margin: auto; 
 }
 
 
@@ -153,9 +163,8 @@ a.sidebar-link:hover {
 }
 
 .sidebar-link.active, .sidebar-link.active:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Light transparent white */
+    background-color: rgba(255, 255, 255, 0.1); 
 }
-
 
 
 .btn-custom-position {
@@ -277,12 +286,4 @@ a.sidebar-link:hover {
     font-weight: bold;
     text-align: left; 
 }
-
-
-
-
-
-
-
-
 

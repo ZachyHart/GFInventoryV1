@@ -17,13 +17,13 @@
    
 </head>
 
-
 <body>
     <div class="wrapper">
         <aside id="sidebar">
-            <!-- Logo at the top of the sidebar -->
+            
             <div class="sidebar-logo">
-                <img src="img/CircularLogo.jpg" alt="Logo" style="width: 100%; max-width: 120px; display: block; margin: 0 auto;">
+                <img src="img/CircularLogo.jpg" alt="Logo"
+                    style="width: 100%; max-width: 120px; display: block; margin: 0 auto;">
             </div>
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
@@ -42,12 +42,12 @@
                 <!-- Add more sidebar items here -->
             </ul>
             <div class="sidebar-footer">
-                <a href="login.php" class="sidebar-link" title="Logout">
+                <a href="Customerlogin.php" class="sidebar-link" title="Logout">
                     <i class="lni lni-exit"></i>
-                    
                 </a>
             </div>
         </aside>
+
         <div class="main p-3">
             <div class="text-center">
                 <h1 class="inventory-title">Customer Feedback</h1>
@@ -75,7 +75,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-    <script src="WorkingSidebar.js"></script>
+    <script src="AdminInventory.js"></script>
+
 </body>
 
 </html>
