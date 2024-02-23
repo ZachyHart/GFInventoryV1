@@ -1,1 +1,2 @@
-# GFInventoryV1
+# GFInventory
+Inventory
