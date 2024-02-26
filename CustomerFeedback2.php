@@ -131,11 +131,11 @@
     <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header text-center"> <!-- Added text-center class -->
+            <div class="modal-header text-center"> 
                 <h1 class="modal-title" id="successModalLabel">Thank You!</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body text-center"> <!-- Centering modal body content as well -->
+            <div class="modal-body text-center"> 
                 Your form has been successfully submitted. Thanks!
             </div>
         </div>
