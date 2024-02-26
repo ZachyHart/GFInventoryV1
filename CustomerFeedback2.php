@@ -30,7 +30,7 @@
                         <span><br>Our Products</span>
                     </a>
                 </li>
-                <!-- Second sidebar item for Feedback -->
+                
                 <li class="sidebar-item">
                     <a href="CustomerFeedback.php" class="sidebar-link" title="Feedback">
                         <i class="lni lni-comments"></i>
@@ -111,7 +111,7 @@
         }
     </script>
 
-    <!-- Bootstrap Modal for Confirmation -->
+   
     <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -127,20 +127,23 @@
         </div>
     </div>
 
-    <!-- Bootstrap Modal for Success -->
+    
     <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="successModalLabel">Success</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    Registration Successful
-                </div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header text-center"> <!-- Added text-center class -->
+                <h1 class="modal-title" id="successModalLabel">Thank You!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center"> <!-- Centering modal body content as well -->
+                Your form has been successfully submitted. Thanks!
             </div>
         </div>
     </div>
+</div>
+
+
+
 </body>
 
 </html>

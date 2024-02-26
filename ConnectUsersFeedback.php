@@ -12,7 +12,7 @@
             $stmt = $conn->prepare("INSERT INTO customerfeedbacks (Email, FeedbackTitle, FeedbackContent) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $email, $feedbacktitle, $feedbackcontent);
             $stmt->execute();
-            // Output success message
+            
             echo "<script>
                     $('#confirmationModal').modal('hide'); // Hide the confirmation modal
                     $('#successModal').modal('show'); // Show success modal
