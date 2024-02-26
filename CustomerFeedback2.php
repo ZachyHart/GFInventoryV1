@@ -78,9 +78,25 @@
         }
 
         function submitForm() {
-            // Submit the form
-            document.getElementById("feedbackForm").submit();
+    var formData = $('#feedbackForm').serialize(); // Serialize form data
+    $.ajax({
+        type: 'POST',
+        url: 'ConnectUsersFeedback.php',
+        data: formData,
+        success: function(response) {
+            // Handle success
+            $('#confirmationModal').modal('hide'); // Hide the confirmation modal
+            $('#successModal').modal('show'); // Show success modal
+            $('#feedbackForm')[0].reset(); // Reset form fields
+        },
+        error: function(xhr, status, error) {
+            // Handle error
+            alert('An error occurred while submitting the form.');
+            console.error(error);
         }
+    });
+}
+
 
         function validateForm() {
             var email = document.getElementById('email').value;
