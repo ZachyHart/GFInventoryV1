@@ -72,7 +72,7 @@
                                 Feedback from <?php echo $row['Email']; ?>
                             </div>
                             <div class="card-body">
-                                <p class="card-text"><strong><?php echo $row['FeedbackTitle']; ?></strong></p>
+                                <h5 class="card-title"><strong><?php echo $row['FeedbackTitle']; ?></strong></h5>
                                 <p class="card-text"><?php echo $row['FeedbackContent']; ?></p>
                                 <!-- Add form for reply here -->
                                 <form method="post" action="reply_handler.php">
