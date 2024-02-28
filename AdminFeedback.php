@@ -17,7 +17,7 @@
 <body>
     <div class="wrapper">
         <aside id="sidebar">
-            <!-- Logo at the top of the sidebar -->
+            
             <div class="sidebar-logo">
                 <img src="img/CircularLogo.jpg" alt="Logo" style="width: 100%; max-width: 120px; display: block; margin: 0 auto;">
             </div>
@@ -64,7 +64,7 @@
                 $result = mysqli_query($conn, $sql);
 
                 if (mysqli_num_rows($result) > 0) {
-                    // Output data of each row
+                    
                     while ($row = mysqli_fetch_assoc($result)) {
                         ?>
                         <div class="card mb-3">
@@ -72,6 +72,7 @@
                                 Feedback from <?php echo $row['Email']; ?>
                             </div>
                             <div class="card-body">
+                                <p class="card-text"><strong><?php echo $row['FeedbackTitle']; ?></strong></p>
                                 <p class="card-text"><?php echo $row['FeedbackContent']; ?></p>
                                 <!-- Add form for reply here -->
                                 <form method="post" action="reply_handler.php">
